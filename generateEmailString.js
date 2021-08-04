@@ -157,7 +157,7 @@ function generateEmailString(settings) {
               </tr>
             </table>
           </center>
-          ${createEmailFooter(settings.footerMessage)}}
+          ${createEmailFooter(settings.footerMessage)}
         </td>
       </tr>
   </table>
