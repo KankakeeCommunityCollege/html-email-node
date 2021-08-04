@@ -35,8 +35,8 @@ This project uses a few custom JS modules and Nodejs to create HTML email files 
 
 1. Clone the repository and cd inside:
 ```bash
-git clone <https://github.com/>
-cd <https://github.com/>
+git clone git@github.com:KankakeeCommunityCollege/html-email-node.git
+cd html-email-node
 ```
 
 ### The `settings` object
