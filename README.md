@@ -18,6 +18,7 @@
       - [`emailSignature`](#emailsignature)
       - [`footerMessage`](#footermessage)
     - [Build the email](#build-the-email)
+    - [Example HTML email](#example-html-email)
 
 ## Overview
 
@@ -136,3 +137,9 @@ node index.js
 ```
 
 This creates a new `.html` file inside the `dist/` folder containing all of the awful, hideous, and old-school HTML for your email--annoying nested tables and all!
+
+### Example HTML email
+
+Below is a screenshot of an email generated using this project. You can see the full-width header-image at the top, the email body, signature line, and footer message. The logo and social media links are part of the template.
+
+![Screenshot of a generated HTML email](./assets/img/example-generated-email.jpg)
