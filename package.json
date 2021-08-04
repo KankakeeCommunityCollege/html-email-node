@@ -1,0 +1,11 @@
+{
+  "name": "html-email-node",
+  "version": "1.0.0",
+  "description": "Generate HTML email files using JavaScript",
+  "private": true,
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "https://github.com/wdzajicek",
+  "license": "ISC"
+}
