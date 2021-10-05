@@ -11,13 +11,14 @@
   - [Overview](#overview)
   - [Requirements](#requirements)
   - [Usage](#usage)
-    - [The `settings` object](#the-settings-object)
+    - [1.) The `settings` object](#1-the-settings-object)
       - [`title`](#title)
       - [`fullWidthHeaderImage`](#fullwidthheaderimage)
       - [`bodyParagraphArray`](#bodyparagrapharray)
       - [`emailSignature`](#emailsignature)
       - [`footerMessage`](#footermessage)
-    - [Build the email](#build-the-email)
+    - [2.) Upload Image Files](#2-upload-image-files)
+    - [3.) Build the email](#3-build-the-email)
     - [Example HTML email](#example-html-email)
 
 ## Overview
@@ -40,9 +41,9 @@ git clone git@github.com:KankakeeCommunityCollege/html-email-node.git
 cd html-email-node
 ```
 
-### The `settings` object
+### 1.) The `settings` object
 
-The html email file is configured using a `settings` object found in `./index.js`. This object requires the following keys: `title`, `fullWidthHeaderImage.src`, `fullWidthHeaderImage.alt`, `bodyParagraphArray`, `emailSignature`, and `footerMessage`. You will get errors when running index.js if any are missing:
+The html email file is configured using a `settings` object found in `./index.js`. This object requires the following keys: `title`, `fullWidthHeaderImage.src`, `fullWidthHeaderImage.alt`, `bodyParagraphArray`, `emailSignature`, and `footerMessage`. You will get errors when running index.js if any settings are missing.
 
 ```javascript
 const settings = {
@@ -60,6 +61,10 @@ const settings = {
   footerMessage: 'footer content',
 }
 ```
+
+These settings correspond to the sections of the email as shown below.
+
+![](./assets/img/example-generated-email-zones.jpg)
 
 #### `title`
 
@@ -127,7 +132,13 @@ The `footerMessage` will be the bottom-most content in the email. IT usually con
 
 **Note:** The `year` variable is defined towards the top of `index.js`. Use the `year` variable to set the copyright year and it will always be the current year.
 
-### Build the email
+### 2.) Upload Image Files
+
+For images to work in the resulting HTML email the image files need to be hosted on a public KCC url.
+
+__*There is a specific folder on `Web03` in the `cdn` subdomain for this purpose.*__ Upload all image files to `https://cdn.kcc.edu/graphics` which has the following path on `web03.kcc.edu`: `websites` > `kcc.edu` > `cdn` > `graphics` or `web03.kcc.edu/websites/kcc.edu/cdn/graphics/`.
+
+### 3.) Build the email
 
 To build the email either use the `build` npm script or run the `node` command:
 ```bash
